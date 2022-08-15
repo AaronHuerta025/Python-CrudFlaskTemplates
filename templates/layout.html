@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %} | Aprendiendo Flask con Victor Robles {% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/styles.css') }}">
+</head>
+
+<body>
+    <h1>Aprendiendo Flask con Victor Robles</h1>
+    <hr>
+
+
+        <ul>
+            <li>
+                <a href="/">Inicio</a>
+            </li>
+
+            <li>
+                <a href="{{ url_for('informacion') }}">Informacion</a>
+            </li>
+
+            <li>
+                <a href="{{ url_for('contacto') }}">Contacto</a>
+            </li>
+
+            <li>
+                <a href="{{ url_for('lenguajes') }}">Lenguajes de programación</a>
+            </li>
+
+            <li>
+                <a href="{{ url_for('crear_coche') }}">Coche Nuevo</a>
+            </li>
+
+            <li>
+                <a href="{{ url_for('coches') }}">Listado de coches</a>
+            </li>
+        </ul>
+
+
+    <hr>
+
+    <section id="content">
+        {% block content %}
+
+        {% endblock %}
+    </section>
+
+
+    <br>
+    <footer>
+        Máster en Python &copy;  {{ now.month }}- {{ now.year }}
+    </footer>
+
+</body>
+
+
+</html>

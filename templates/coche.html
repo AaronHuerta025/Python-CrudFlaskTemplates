@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    {{coche.2}}
+{% endblock %}
+
+
+{% block content %}
+    <h1>{{ coche.1 }}</h1>
+    <p>{{ coche.2 }}</p>
+    <p>{{ coche.3 }}</p>
+    <p>{{ coche.0 }}</p>
+
+{#    {% for i in coche %}#}
+{#        <div>#}
+{#            <ul>#}
+{#                <li>{{ i.1 }}</li>#}
+{#                <li>{{ i.2 }}</li>#}
+{#                <li>{{ i.3 }}</li>#}
+{#                <li>{{ i.0 }}</li>#}
+{#            </ul>#}
+{#        </div>#}
+{##}
+{#    {% endfor %}#}
+
+{% endblock %}
